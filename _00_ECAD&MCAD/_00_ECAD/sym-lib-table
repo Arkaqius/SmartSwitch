@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name "2020-02-05_19-47-55")(type "Legacy")(uri "${MINE2}/2020-02-05_19-47-55.lib")(options "")(descr ""))
+  (lib (name "Converter_ACDC2")(type "Legacy")(uri "${MINE2}/Converter_ACDC2.lib")(options "")(descr ""))
+  (lib (name "G3MB-202PL-DC12")(type "Legacy")(uri "${MINE2}/G3MB-202PL-DC12.lib")(options "")(descr ""))
+  (lib (name "SmartSwitch-cache")(type "Legacy")(uri "${MINE2}/SmartSwitch-cache.lib")(options "")(descr ""))
+)

@@ -1,0 +1,771 @@
+EESchema Schematic File Version 4
+LIBS:SmartSwitch-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:LED D1
+U 1 1 619E388E
+P 2950 2350
+F 0 "D1" V 2988 2233 50  0000 R CNN
+F 1 "LED" V 2897 2233 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2950 2350 50  0001 C CNN
+F 3 "~" H 2950 2350 50  0001 C CNN
+	1    2950 2350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 619E3895
+P 1800 1200
+AR Path="/619E3895" Ref="R?"  Part="1" 
+AR Path="/5C441F86/619E3895" Ref="R?"  Part="1" 
+AR Path="/619E3702/619E3895" Ref="R1"  Part="1" 
+F 0 "R1" V 1593 1200 50  0000 C CNN
+F 1 "1k" V 1684 1200 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 1730 1200 50  0001 C CNN
+F 3 "~" H 1800 1200 50  0001 C CNN
+	1    1800 1200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 619E389C
+P 2550 1900
+AR Path="/619E389C" Ref="R?"  Part="1" 
+AR Path="/5C441F86/619E389C" Ref="R?"  Part="1" 
+AR Path="/619E3702/619E389C" Ref="R13"  Part="1" 
+F 0 "R13" H 2480 1854 50  0000 R CNN
+F 1 "10k" H 2480 1945 50  0000 R CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2480 1900 50  0001 C CNN
+F 3 "~" H 2550 1900 50  0001 C CNN
+	1    2550 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:MMBT5550L Q?
+U 1 1 619E38A3
+P 2850 1450
+AR Path="/619E38A3" Ref="Q?"  Part="1" 
+AR Path="/619E3702/619E38A3" Ref="Q1"  Part="1" 
+F 0 "Q1" H 3041 1496 50  0000 L CNN
+F 1 "MMBT5550L" H 3041 1405 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3050 1375 50  0001 L CIN
+F 3 "www.onsemi.com/pub/Collateral/MMBT5550LT1-D.PDF" H 2850 1450 50  0001 L CNN
+	1    2850 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR023
+U 1 1 619E38AA
+P 2950 1150
+F 0 "#PWR023" H 2950 1000 50  0001 C CNN
+F 1 "+3V3" H 2965 1323 50  0000 C CNN
+F 2 "" H 2950 1150 50  0001 C CNN
+F 3 "" H 2950 1150 50  0001 C CNN
+	1    2950 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR024
+U 1 1 619E38B0
+P 2950 2700
+F 0 "#PWR024" H 2950 2450 50  0001 C CNN
+F 1 "GNDD" H 2954 2545 50  0000 C CNN
+F 2 "" H 2950 2700 50  0001 C CNN
+F 3 "" H 2950 2700 50  0001 C CNN
+	1    2950 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 1150 2950 1250
+$Comp
+L Device:R R?
+U 1 1 619E38B7
+P 2950 1900
+AR Path="/619E38B7" Ref="R?"  Part="1" 
+AR Path="/619E3702/619E38B7" Ref="R15"  Part="1" 
+F 0 "R15" H 3020 1946 50  0000 L CNN
+F 1 "300" H 3020 1855 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2880 1900 50  0001 C CNN
+F 3 "~" H 2950 1900 50  0001 C CNN
+	1    2950 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 1650 2950 1700
+Wire Wire Line
+	3050 1700 2950 1700
+Connection ~ 2950 1700
+Wire Wire Line
+	2950 1700 2950 1750
+Wire Wire Line
+	2450 1450 2550 1450
+Wire Wire Line
+	2950 2500 2950 2600
+Wire Wire Line
+	2550 1450 2550 1750
+Connection ~ 2550 1450
+Wire Wire Line
+	2550 1450 2650 1450
+Wire Wire Line
+	2550 2050 2550 2600
+Wire Wire Line
+	2950 2050 2950 2200
+Wire Wire Line
+	2550 2600 2950 2600
+Connection ~ 2950 2600
+Wire Wire Line
+	2950 2600 2950 2700
+$Comp
+L Device:R R?
+U 1 1 619E38CC
+P 1800 1650
+AR Path="/619E38CC" Ref="R?"  Part="1" 
+AR Path="/5C441F86/619E38CC" Ref="R?"  Part="1" 
+AR Path="/619E3702/619E38CC" Ref="R2"  Part="1" 
+F 0 "R2" V 1593 1650 50  0000 C CNN
+F 1 "1k" V 1684 1650 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 1730 1650 50  0001 C CNN
+F 3 "~" H 1800 1650 50  0001 C CNN
+	1    1800 1650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1800 1350 1800 1450
+$Comp
+L Device:R R?
+U 1 1 619E38D4
+P 2300 1450
+AR Path="/619E38D4" Ref="R?"  Part="1" 
+AR Path="/5C441F86/619E38D4" Ref="R?"  Part="1" 
+AR Path="/619E3702/619E38D4" Ref="R5"  Part="1" 
+F 0 "R5" V 2093 1450 50  0000 C CNN
+F 1 "1k" V 2184 1450 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2230 1450 50  0001 C CNN
+F 3 "~" H 2300 1450 50  0001 C CNN
+	1    2300 1450
+	0    1    1    0   
+$EndComp
+Connection ~ 1800 1450
+Wire Wire Line
+	1800 1450 1800 1500
+Wire Wire Line
+	1800 1800 1800 1900
+$Comp
+L power:GNDD #PWR021
+U 1 1 619E38E1
+P 1800 1900
+F 0 "#PWR021" H 1800 1650 50  0001 C CNN
+F 1 "GNDD" H 1804 1745 50  0000 C CNN
+F 2 "" H 1800 1900 50  0001 C CNN
+F 3 "" H 1800 1900 50  0001 C CNN
+	1    1800 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 1450 2150 1450
+Text HLabel 1700 950  0    50   Input ~ 0
+IN1
+Wire Wire Line
+	1700 950  1800 950 
+Wire Wire Line
+	1800 950  1800 1050
+$Comp
+L Device:LED D2
+U 1 1 619E47A4
+P 2950 4400
+F 0 "D2" V 2988 4283 50  0000 R CNN
+F 1 "LED" V 2897 4283 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2950 4400 50  0001 C CNN
+F 3 "~" H 2950 4400 50  0001 C CNN
+	1    2950 4400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 619E47AB
+P 1800 3250
+AR Path="/619E47AB" Ref="R?"  Part="1" 
+AR Path="/5C441F86/619E47AB" Ref="R?"  Part="1" 
+AR Path="/619E3702/619E47AB" Ref="R3"  Part="1" 
+F 0 "R3" V 1593 3250 50  0000 C CNN
+F 1 "1k" V 1684 3250 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 1730 3250 50  0001 C CNN
+F 3 "~" H 1800 3250 50  0001 C CNN
+	1    1800 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 619E47B2
+P 2550 3950
+AR Path="/619E47B2" Ref="R?"  Part="1" 
+AR Path="/5C441F86/619E47B2" Ref="R?"  Part="1" 
+AR Path="/619E3702/619E47B2" Ref="R14"  Part="1" 
+F 0 "R14" H 2480 3904 50  0000 R CNN
+F 1 "10k" H 2480 3995 50  0000 R CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2480 3950 50  0001 C CNN
+F 3 "~" H 2550 3950 50  0001 C CNN
+	1    2550 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:MMBT5550L Q?
+U 1 1 619E47B9
+P 2850 3500
+AR Path="/619E47B9" Ref="Q?"  Part="1" 
+AR Path="/619E3702/619E47B9" Ref="Q2"  Part="1" 
+F 0 "Q2" H 3041 3546 50  0000 L CNN
+F 1 "MMBT5550L" H 3041 3455 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3050 3425 50  0001 L CIN
+F 3 "www.onsemi.com/pub/Collateral/MMBT5550LT1-D.PDF" H 2850 3500 50  0001 L CNN
+	1    2850 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR025
+U 1 1 619E47C0
+P 2950 3200
+F 0 "#PWR025" H 2950 3050 50  0001 C CNN
+F 1 "+3V3" H 2965 3373 50  0000 C CNN
+F 2 "" H 2950 3200 50  0001 C CNN
+F 3 "" H 2950 3200 50  0001 C CNN
+	1    2950 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR026
+U 1 1 619E47C6
+P 2950 4750
+F 0 "#PWR026" H 2950 4500 50  0001 C CNN
+F 1 "GNDD" H 2954 4595 50  0000 C CNN
+F 2 "" H 2950 4750 50  0001 C CNN
+F 3 "" H 2950 4750 50  0001 C CNN
+	1    2950 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 3200 2950 3300
+$Comp
+L Device:R R?
+U 1 1 619E47CD
+P 2950 3950
+AR Path="/619E47CD" Ref="R?"  Part="1" 
+AR Path="/619E3702/619E47CD" Ref="R16"  Part="1" 
+F 0 "R16" H 3020 3996 50  0000 L CNN
+F 1 "300" H 3020 3905 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2880 3950 50  0001 C CNN
+F 3 "~" H 2950 3950 50  0001 C CNN
+	1    2950 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 3700 2950 3750
+Wire Wire Line
+	3050 3750 2950 3750
+Connection ~ 2950 3750
+Wire Wire Line
+	2950 3750 2950 3800
+Wire Wire Line
+	2450 3500 2550 3500
+Wire Wire Line
+	2950 4550 2950 4650
+Wire Wire Line
+	2550 3500 2550 3800
+Connection ~ 2550 3500
+Wire Wire Line
+	2550 3500 2650 3500
+Wire Wire Line
+	2550 4100 2550 4650
+Wire Wire Line
+	2950 4100 2950 4250
+Wire Wire Line
+	2550 4650 2950 4650
+Connection ~ 2950 4650
+Wire Wire Line
+	2950 4650 2950 4750
+$Comp
+L Device:R R?
+U 1 1 619E47E2
+P 1800 3700
+AR Path="/619E47E2" Ref="R?"  Part="1" 
+AR Path="/5C441F86/619E47E2" Ref="R?"  Part="1" 
+AR Path="/619E3702/619E47E2" Ref="R4"  Part="1" 
+F 0 "R4" V 1593 3700 50  0000 C CNN
+F 1 "1k" V 1684 3700 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 1730 3700 50  0001 C CNN
+F 3 "~" H 1800 3700 50  0001 C CNN
+	1    1800 3700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1800 3400 1800 3500
+$Comp
+L Device:R R?
+U 1 1 619E47EA
+P 2300 3500
+AR Path="/619E47EA" Ref="R?"  Part="1" 
+AR Path="/5C441F86/619E47EA" Ref="R?"  Part="1" 
+AR Path="/619E3702/619E47EA" Ref="R6"  Part="1" 
+F 0 "R6" V 2093 3500 50  0000 C CNN
+F 1 "1k" V 2184 3500 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2230 3500 50  0001 C CNN
+F 3 "~" H 2300 3500 50  0001 C CNN
+	1    2300 3500
+	0    1    1    0   
+$EndComp
+Connection ~ 1800 3500
+Wire Wire Line
+	1800 3500 1800 3550
+Wire Wire Line
+	1800 3850 1800 3950
+$Comp
+L power:GNDD #PWR022
+U 1 1 619E47F4
+P 1800 3950
+F 0 "#PWR022" H 1800 3700 50  0001 C CNN
+F 1 "GNDD" H 1804 3795 50  0000 C CNN
+F 2 "" H 1800 3950 50  0001 C CNN
+F 3 "" H 1800 3950 50  0001 C CNN
+	1    1800 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 3500 2150 3500
+Text HLabel 1700 3000 0    50   Input ~ 0
+IN2
+Wire Wire Line
+	1700 3000 1800 3000
+Wire Wire Line
+	1800 3000 1800 3100
+Text HLabel 3050 1700 2    50   Input ~ 0
+IN1_MCU
+Text HLabel 3050 3750 2    50   Input ~ 0
+IN2_MCU
+$Comp
+L Device:R R?
+U 1 1 61A60733
+P 5300 2300
+AR Path="/61A60733" Ref="R?"  Part="1" 
+AR Path="/5C441F86/61A60733" Ref="R?"  Part="1" 
+AR Path="/619E3702/61A60733" Ref="R17"  Part="1" 
+F 0 "R17" V 5093 2300 50  0000 C CNN
+F 1 "1k" V 5184 2300 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5230 2300 50  0001 C CNN
+F 3 "~" H 5300 2300 50  0001 C CNN
+	1    5300 2300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61A6073A
+P 5600 2550
+AR Path="/61A6073A" Ref="R?"  Part="1" 
+AR Path="/5C441F86/61A6073A" Ref="R?"  Part="1" 
+AR Path="/619E3702/61A6073A" Ref="R19"  Part="1" 
+F 0 "R19" H 5530 2504 50  0000 R CNN
+F 1 "10k" H 5530 2595 50  0000 R CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5530 2550 50  0001 C CNN
+F 3 "~" H 5600 2550 50  0001 C CNN
+	1    5600 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 2300 5100 2300
+Wire Wire Line
+	5800 2300 5600 2300
+Wire Wire Line
+	5600 2400 5600 2300
+Connection ~ 5600 2300
+Wire Wire Line
+	5600 2300 5450 2300
+Wire Wire Line
+	5600 2700 5600 2750
+Wire Wire Line
+	5600 2750 6100 2750
+$Comp
+L power:+5V #PWR?
+U 1 1 61A60751
+P 6100 1050
+AR Path="/61A60751" Ref="#PWR?"  Part="1" 
+AR Path="/619E3702/61A60751" Ref="#PWR027"  Part="1" 
+F 0 "#PWR027" H 6100 900 50  0001 C CNN
+F 1 "+5V" H 6115 1223 50  0000 C CNN
+F 2 "" H 6100 1050 50  0001 C CNN
+F 3 "" H 6100 1050 50  0001 C CNN
+	1    6100 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR?
+U 1 1 61A6075C
+P 6100 2900
+AR Path="/61A6075C" Ref="#PWR?"  Part="1" 
+AR Path="/619E3702/61A6075C" Ref="#PWR028"  Part="1" 
+F 0 "#PWR028" H 6100 2650 50  0001 C CNN
+F 1 "GNDD" H 6104 2745 50  0000 C CNN
+F 2 "" H 6100 2900 50  0001 C CNN
+F 3 "" H 6100 2900 50  0001 C CNN
+	1    6100 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:MMBT5550L Q?
+U 1 1 61A60763
+P 6000 2300
+AR Path="/61A60763" Ref="Q?"  Part="1" 
+AR Path="/619E3702/61A60763" Ref="Q3"  Part="1" 
+F 0 "Q3" H 6191 2346 50  0000 L CNN
+F 1 "MMBT5550L" H 6191 2255 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6200 2225 50  0001 L CIN
+F 3 "www.onsemi.com/pub/Collateral/MMBT5550LT1-D.PDF" H 6000 2300 50  0001 L CNN
+	1    6000 2300
+	1    0    0    -1  
+$EndComp
+Connection ~ 6100 2750
+Wire Wire Line
+	6100 2750 6100 2900
+Wire Wire Line
+	6100 2750 6100 2500
+$Comp
+L Diode:1N4001 D6
+U 1 1 61A69DD0
+P 6100 1650
+F 0 "D6" H 6100 1866 50  0000 C CNN
+F 1 "1N4001" H 6100 1775 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 6100 1475 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 6100 1650 50  0001 C CNN
+	1    6100 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 61A6C43B
+P 5900 1850
+AR Path="/61A6C43B" Ref="D?"  Part="1" 
+AR Path="/619E3702/61A6C43B" Ref="D4"  Part="1" 
+F 0 "D4" V 5938 1733 50  0000 R CNN
+F 1 "LED" V 5847 1733 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5900 1850 50  0001 C CNN
+F 3 "~" H 5900 1850 50  0001 C CNN
+	1    5900 1850
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61A6C442
+P 5900 1400
+AR Path="/61A6C442" Ref="R?"  Part="1" 
+AR Path="/5C441F86/61A6C442" Ref="R?"  Part="1" 
+AR Path="/619E3702/61A6C442" Ref="R21"  Part="1" 
+F 0 "R21" V 5693 1400 50  0000 C CNN
+F 1 "1k" V 5784 1400 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5830 1400 50  0001 C CNN
+F 3 "~" H 5900 1400 50  0001 C CNN
+	1    5900 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 1550 5900 1700
+Wire Wire Line
+	5900 2050 5900 2000
+Wire Wire Line
+	6100 2050 6100 2100
+Wire Wire Line
+	5900 1150 6100 1150
+Wire Wire Line
+	6100 1050 6100 1150
+Connection ~ 6100 1150
+Wire Wire Line
+	5900 1150 5900 1250
+Wire Wire Line
+	5900 2050 6100 2050
+Wire Wire Line
+	6800 2050 6100 2050
+Connection ~ 6100 2050
+Wire Wire Line
+	6100 1800 6100 2050
+Wire Wire Line
+	6100 1150 6100 1500
+$Comp
+L Relay:G5LE-1 K?
+U 1 1 61A6076A
+P 7000 1600
+AR Path="/61A6076A" Ref="K?"  Part="1" 
+AR Path="/619E3702/61A6076A" Ref="K1"  Part="1" 
+F 0 "K1" V 6433 1600 50  0000 C CNN
+F 1 "G5LE-1" V 6524 1600 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_Omron-G5LE-1" H 7450 1550 50  0001 L CNN
+F 3 "http://www.omron.com/ecb/products/pdf/en-g5le.pdf" H 7000 1200 50  0001 C CNN
+	1    7000 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 1300 6800 1150
+Wire Wire Line
+	6800 1150 6100 1150
+Wire Wire Line
+	6800 1900 6800 2050
+$Comp
+L Device:R R?
+U 1 1 61A87C5D
+P 5350 4700
+AR Path="/61A87C5D" Ref="R?"  Part="1" 
+AR Path="/5C441F86/61A87C5D" Ref="R?"  Part="1" 
+AR Path="/619E3702/61A87C5D" Ref="R18"  Part="1" 
+F 0 "R18" V 5143 4700 50  0000 C CNN
+F 1 "1k" V 5234 4700 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5280 4700 50  0001 C CNN
+F 3 "~" H 5350 4700 50  0001 C CNN
+	1    5350 4700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61A87C64
+P 5650 4950
+AR Path="/61A87C64" Ref="R?"  Part="1" 
+AR Path="/5C441F86/61A87C64" Ref="R?"  Part="1" 
+AR Path="/619E3702/61A87C64" Ref="R20"  Part="1" 
+F 0 "R20" H 5580 4904 50  0000 R CNN
+F 1 "10k" H 5580 4995 50  0000 R CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5580 4950 50  0001 C CNN
+F 3 "~" H 5650 4950 50  0001 C CNN
+	1    5650 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 4700 5650 4700
+Wire Wire Line
+	5650 4800 5650 4700
+Connection ~ 5650 4700
+Wire Wire Line
+	5650 4700 5500 4700
+Wire Wire Line
+	5650 5100 5650 5150
+Wire Wire Line
+	5650 5150 6150 5150
+$Comp
+L power:+5V #PWR?
+U 1 1 61A87C72
+P 6150 3450
+AR Path="/61A87C72" Ref="#PWR?"  Part="1" 
+AR Path="/619E3702/61A87C72" Ref="#PWR029"  Part="1" 
+F 0 "#PWR029" H 6150 3300 50  0001 C CNN
+F 1 "+5V" H 6165 3623 50  0000 C CNN
+F 2 "" H 6150 3450 50  0001 C CNN
+F 3 "" H 6150 3450 50  0001 C CNN
+	1    6150 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR?
+U 1 1 61A87C78
+P 6150 5300
+AR Path="/61A87C78" Ref="#PWR?"  Part="1" 
+AR Path="/619E3702/61A87C78" Ref="#PWR030"  Part="1" 
+F 0 "#PWR030" H 6150 5050 50  0001 C CNN
+F 1 "GNDD" H 6154 5145 50  0000 C CNN
+F 2 "" H 6150 5300 50  0001 C CNN
+F 3 "" H 6150 5300 50  0001 C CNN
+	1    6150 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:MMBT5550L Q?
+U 1 1 61A87C7E
+P 6050 4700
+AR Path="/61A87C7E" Ref="Q?"  Part="1" 
+AR Path="/619E3702/61A87C7E" Ref="Q4"  Part="1" 
+F 0 "Q4" H 6241 4746 50  0000 L CNN
+F 1 "MMBT5550L" H 6241 4655 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6250 4625 50  0001 L CIN
+F 3 "www.onsemi.com/pub/Collateral/MMBT5550LT1-D.PDF" H 6050 4700 50  0001 L CNN
+	1    6050 4700
+	1    0    0    -1  
+$EndComp
+Connection ~ 6150 5150
+Wire Wire Line
+	6150 5150 6150 5300
+Wire Wire Line
+	6150 5150 6150 4900
+$Comp
+L Diode:1N4001 D7
+U 1 1 61A87C88
+P 6150 4050
+F 0 "D7" H 6150 4266 50  0000 C CNN
+F 1 "1N4001" H 6150 4175 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 6150 3875 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 6150 4050 50  0001 C CNN
+	1    6150 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 61A87C8F
+P 5950 4250
+AR Path="/61A87C8F" Ref="D?"  Part="1" 
+AR Path="/619E3702/61A87C8F" Ref="D5"  Part="1" 
+F 0 "D5" V 5988 4133 50  0000 R CNN
+F 1 "LED" V 5897 4133 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5950 4250 50  0001 C CNN
+F 3 "~" H 5950 4250 50  0001 C CNN
+	1    5950 4250
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61A87C96
+P 5950 3800
+AR Path="/61A87C96" Ref="R?"  Part="1" 
+AR Path="/5C441F86/61A87C96" Ref="R?"  Part="1" 
+AR Path="/619E3702/61A87C96" Ref="R22"  Part="1" 
+F 0 "R22" V 5743 3800 50  0000 C CNN
+F 1 "1k" V 5834 3800 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5880 3800 50  0001 C CNN
+F 3 "~" H 5950 3800 50  0001 C CNN
+	1    5950 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 3950 5950 4100
+Wire Wire Line
+	5950 4450 5950 4400
+Wire Wire Line
+	6150 4450 6150 4500
+Wire Wire Line
+	5950 3550 6150 3550
+Wire Wire Line
+	6150 3450 6150 3550
+Connection ~ 6150 3550
+Wire Wire Line
+	5950 3550 5950 3650
+Wire Wire Line
+	5950 4450 6150 4450
+Wire Wire Line
+	6850 4450 6150 4450
+Connection ~ 6150 4450
+Wire Wire Line
+	6150 4200 6150 4450
+Wire Wire Line
+	6150 3550 6150 3900
+Wire Wire Line
+	6850 3700 6850 3550
+Wire Wire Line
+	6850 3550 6150 3550
+Wire Wire Line
+	6850 4300 6850 4450
+Wire Wire Line
+	5100 4700 5150 4700
+Text HLabel 5050 2300 0    50   Input ~ 0
+OUT1
+Text HLabel 5100 4700 0    50   Input ~ 0
+OUT2
+Text HLabel 7200 2000 3    50   Input ~ 0
+COM1
+Wire Wire Line
+	7200 1900 7200 2000
+Text HLabel 7250 4400 3    50   Input ~ 0
+COM2
+Wire Wire Line
+	7250 4300 7250 4400
+Text HLabel 7100 1200 1    50   Input ~ 0
+NC1
+Text HLabel 7300 1200 1    50   Input ~ 0
+NO1
+Text HLabel 7150 3600 1    50   Input ~ 0
+NC2
+Text HLabel 7350 3600 1    50   Input ~ 0
+NO2
+Wire Wire Line
+	7150 3600 7150 3700
+Wire Wire Line
+	7350 3600 7350 3700
+Wire Wire Line
+	7100 1300 7100 1200
+Wire Wire Line
+	7300 1300 7300 1200
+$Comp
+L Connector:TestPoint TP?
+U 1 1 61508FDF
+P 1800 950
+AR Path="/61508FDF" Ref="TP?"  Part="1" 
+AR Path="/619E3702/61508FDF" Ref="TP7"  Part="1" 
+F 0 "TP7" H 1858 1024 50  0000 L CNN
+F 1 "TestPoint" H 1858 979 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2000 950 50  0001 C CNN
+F 3 "~" H 2000 950 50  0001 C CNN
+	1    1800 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 6150AA04
+P 1800 3000
+AR Path="/6150AA04" Ref="TP?"  Part="1" 
+AR Path="/619E3702/6150AA04" Ref="TP8"  Part="1" 
+F 0 "TP8" H 1858 3074 50  0000 L CNN
+F 1 "TestPoint" H 1858 3029 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2000 3000 50  0001 C CNN
+F 3 "~" H 2000 3000 50  0001 C CNN
+	1    1800 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 6150C4EE
+P 5100 2300
+AR Path="/6150C4EE" Ref="TP?"  Part="1" 
+AR Path="/619E3702/6150C4EE" Ref="TP9"  Part="1" 
+F 0 "TP9" H 5158 2374 50  0000 L CNN
+F 1 "TestPoint" H 5158 2329 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 5300 2300 50  0001 C CNN
+F 3 "~" H 5300 2300 50  0001 C CNN
+	1    5100 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 6150DFAA
+P 5150 4700
+AR Path="/6150DFAA" Ref="TP?"  Part="1" 
+AR Path="/619E3702/6150DFAA" Ref="TP10"  Part="1" 
+F 0 "TP10" H 5208 4774 50  0000 L CNN
+F 1 "TestPoint" H 5208 4729 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 5350 4700 50  0001 C CNN
+F 3 "~" H 5350 4700 50  0001 C CNN
+	1    5150 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:G5LE-1 K?
+U 1 1 61A87CA9
+P 7050 4000
+AR Path="/61A87CA9" Ref="K?"  Part="1" 
+AR Path="/619E3702/61A87CA9" Ref="K2"  Part="1" 
+F 0 "K2" V 6483 4000 50  0000 C CNN
+F 1 "G5LE-1" V 6574 4000 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_Omron-G5LE-1" H 7500 3950 50  0001 L CNN
+F 3 "http://www.omron.com/ecb/products/pdf/en-g5le.pdf" H 7050 3600 50  0001 C CNN
+	1    7050 4000
+	1    0    0    -1  
+$EndComp
+Connection ~ 5100 2300
+Wire Wire Line
+	5100 2300 5150 2300
+Connection ~ 5150 4700
+Wire Wire Line
+	5150 4700 5200 4700
+$EndSCHEMATC
