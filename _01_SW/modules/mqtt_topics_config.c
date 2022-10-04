@@ -67,13 +67,13 @@ static MQTT_pub_msg mqtt_availability =
 static MQTT_pub_msg mqtt_output1_status =
 {
 		.cycle_time_factor = 1000,
-		.topic = RELAY_1_TOPIC,
+		.topic = OUTPUT_1_TOPIC,
 };
 
 static MQTT_pub_msg mqtt_output2_status =
 {
 		.cycle_time_factor = 1000,
-		.topic = RELAY_1_TOPIC,
+		.topic = OUTPUT_2_TOPIC,
 };
 
 /******************************************************************************
@@ -97,7 +97,8 @@ void init_mqtt_topics(void)
 	mqtt_setter_input(0,0);
 	mqtt_setter_adc(0);
 	mqtt_setter_availability(NOT_AVAILABLE);
-	mqtt_setter_output_state(0,0);
+	mqtt_setter_output1_state(0);
+	mqtt_setter_output2_state(0);
 }
 
 /******************************************************************************
@@ -108,11 +109,14 @@ static void MQTT_relay1_topic_callback(const char *payload)
 	if (os_strcmp(payload, "ON") == 0)
 	{
 		io_hw_set_pin(RELAY_1_OUT,1);
+		mqtt_setter_output1_state(1);
 	}
 	else if(os_strcmp(payload, "OFF") == 0)
 	{
 		io_hw_set_pin(RELAY_1_OUT,0);
+		mqtt_setter_output1_state(1);
 	}
+
 
 }
 
@@ -121,10 +125,12 @@ static void MQTT_relay2_topic_callback(const char *payload)
 	if (os_strcmp(payload, "ON") == 0)
 	{
 		io_hw_set_pin(RELAY_2_OUT,1);
+		mqtt_setter_output2_state(1);
 	}
 	else if(os_strcmp(payload, "OFF") == 0)
 	{
 		io_hw_set_pin(RELAY_2_OUT,0);
+		mqtt_setter_output2_state(0);
 	}
 
 }
@@ -176,24 +182,26 @@ void mqtt_setter_availability(availability_state_t avability)
 
 }
 
-void mqtt_setter_output_state(pin_state_t output_1, pin_state_t output_2)
+void mqtt_setter_output1_state(pin_state_t output_1)
 {
 	if(CLEAR == output_1)
 	{
-		os_sprintf(mqtt_input1.payload,"{\"state\" : \"OFF\"}");
+		os_sprintf(mqtt_output1_status.payload,"{\"state\" : \"OFF\"}");
 	}
 	else
 	{
-		os_sprintf(mqtt_input1.payload,"{\"state\" : \"ON\"}");
-	}
-
-	if(CLEAR == output_2)
-	{
-		os_sprintf(mqtt_input2.payload,"{\"state\" : \"OFF\"}");
-	}
-	else
-	{
-		os_sprintf(mqtt_input2.payload,"{\"state\" : \"ON\"}");
+		os_sprintf(mqtt_output1_status.payload,"{\"state\" : \"ON\"}");
 	}
 }
 
+void mqtt_setter_output2_state(pin_state_t output_2)
+{
+	if(CLEAR == output_2)
+	{
+		os_sprintf(mqtt_output2_status.payload,"{\"state\" : \"OFF\"}");
+	}
+	else
+	{
+		os_sprintf(mqtt_output2_status.payload,"{\"state\" : \"ON\"}");
+	}
+}

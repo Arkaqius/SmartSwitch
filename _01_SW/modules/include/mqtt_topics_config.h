@@ -39,14 +39,16 @@
 /******************************************************************************
 * Configuration Constants
 *******************************************************************************/
-#define TEMPERATURE_TOPIC 	"uni_smart_dev/test/temperature"
-#define INPUT_1_TOPIC		"uni_smart_dev/test/input_1"
-#define INPUT_2_TOPIC		"uni_smart_dev/test/input_2"
-#define ADC_TOPIC			"uni_smart_dev/test/adc"
-#define AVABILITY_TOPIC		"uni_smart_dev/test/availability"
+#define TEMPERATURE_TOPIC 	"usd/test/temperature"
+#define INPUT_1_TOPIC		"usd/test/input_1"
+#define INPUT_2_TOPIC		"usd/test/input_2"
+#define ADC_TOPIC			"usd/test/adc"
+#define AVABILITY_TOPIC		"usd/test/availability"
+#define OUTPUT_1_TOPIC		"usd/test/output_1_status"
+#define OUTPUT_2_TOPIC		"usd/test/output_2_status"
 
-#define RELAY_1_TOPIC		"uni_smart_dev/test/relay_1"
-#define RELAY_2_TOPIC		"uni_smart_dev/test/relay_2"
+#define RELAY_1_TOPIC		"usd/test/relay_1"
+#define RELAY_2_TOPIC		"usd/test/relay_2"
 
 /******************************************************************************
 * Macros
@@ -69,7 +71,8 @@ void mqtt_setter_input(pin_state_t input_1, pin_state_t input_2);
 void mqtt_setter_temperature(int32_t whole, int32_t frac);
 void mqtt_setter_adc(uint16_t adc_val);
 void mqtt_setter_availability(availability_state_t avability);
-void mqtt_setter_output_state(pin_state_t output_1, pin_state_t output_2);
+void mqtt_setter_output1_state(pin_state_t output_1);
+void mqtt_setter_output2_state(pin_state_t output_2);
 
 #endif /*MODULES_INCLUDE_MQTT_TOPICS_CONFIG_H_*/
 

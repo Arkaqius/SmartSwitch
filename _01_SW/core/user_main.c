@@ -11,6 +11,7 @@
 #define MAX_CYCLIC_TIME 2000 /*ms*/
 
 #define GPIO_CYCLE_TIME 50 /*ms*/
+#define ADC_CYCLE_TIME 100 /*ms*/
 #define TEMPERATURE_MEASUREMENT_CYCLE_TIME 500 /*ms*/
 #define DEBUG_UART_OUTPUT_CYCLE_TIME 1000 /*ms*/
 
@@ -139,7 +140,8 @@ static void ICACHE_FLASH_ATTR initialization_SM(void *arg)
 static void ICACHE_FLASH_ATTR main_SM(void *arg)
 {
 	/* Vars */
-	tm_result_t temperature;
+	static tm_result_t temperature;
+	static uint16_t raw_adc;
 
 	/* Update counter */
 	sch_counter+=MAIN_STATE_MACHINE_CYCLIC_TIME;
@@ -149,8 +151,13 @@ static void ICACHE_FLASH_ATTR main_SM(void *arg)
 	{
 		mqtt_setter_input(	io_hw_get_pin(INPUT_1),
 							io_hw_get_pin(INPUT_2));
-		mqtt_setter_adc(0u); /* TODO ADC implementation */
 		process_send_state_machine();
+	}
+	/*Handle ADC*/
+	if(0 == (sch_counter % ADC_CYCLE_TIME))
+	{
+		raw_adc = system_adc_read();
+		mqtt_setter_adc(raw_adc);
 	}
 	/* Handle temperature measurement */
 	if (0 == (sch_counter % TEMPERATURE_MEASUREMENT_CYCLE_TIME))
@@ -167,6 +174,7 @@ static void ICACHE_FLASH_ATTR main_SM(void *arg)
 		os_printf("Inputs 1 :%d 2:%d\n",	io_hw_get_pin(INPUT_1),
 											io_hw_get_pin(INPUT_2));
 		os_printf("Current temperature:%d.%d \n",temperature.cur_temp_whole,temperature.cur_temp_frac);
+		os_printf("ADC value:%d \n",raw_adc);
 	}
 
 	/* Wrap scheduler couter at MAX cyclic time */

@@ -1288,7 +1288,6 @@
     )
   )
 
-
   (junction (at 97.79 31.75) (diameter 0) (color 0 0 0 0)
     (uuid 0ceb97d6-1b0f-4b71-921e-b0955c30c998)
   )
@@ -3094,12 +3093,6 @@
     (path "/00000000-0000-0000-0000-00005e1b8afd"
       (reference "C6") (unit 1) (value "100uF") (footprint "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm")
     )
-    (path "/00000000-0000-0000-0000-0000619e3702/00000000-0000-0000-0000-0000619e388e"
-      (reference "D1") (unit 1) (value "LED") (footprint "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder")
-    )
-    (path "/00000000-0000-0000-0000-0000619e3702/00000000-0000-0000-0000-0000619e47a4"
-      (reference "D2") (unit 1) (value "LED") (footprint "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder")
-    )
     (path "/00000000-0000-0000-0000-00005e21801b"
       (reference "D3") (unit 1) (value "LED") (footprint "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder")
     )
@@ -3225,6 +3218,12 @@
     )
     (path "/00000000-0000-0000-0000-0000619e3702/00000000-0000-0000-0000-000061a87c96"
       (reference "R22") (unit 1) (value "1k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder")
+    )
+    (path "/00000000-0000-0000-0000-0000619e3702/32dde6d7-c889-403f-91a7-1cc450e1105d"
+      (reference "R23") (unit 1) (value "10k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+    )
+    (path "/00000000-0000-0000-0000-0000619e3702/06f63ff5-f2ea-4d2e-b819-1e34f07c9ec6"
+      (reference "R24") (unit 1) (value "10k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-00005e1cfcf1"
       (reference "SW1") (unit 1) (value "RESET") (footprint "Button_Switch_SMD:SW_SPST_B3SL-1022P")

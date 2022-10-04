@@ -255,7 +255,7 @@ mqtt_tcpclient_sent_cb(void *arg)
 {
 	struct espconn *pCon = (struct espconn *)arg;
 	MQTT_Client* client = (MQTT_Client *)pCon->reverse;
-	INFO("TCP: Sent\r\n");
+	//INFO("TCP: Sent\r\n");
 	client->sendTimeout = 0;
 	if(client->connState == MQTT_DATA && client->mqtt_state.pending_msg_type == MQTT_MSG_TYPE_PUBLISH){
 		if(client->publishedCb)
@@ -280,7 +280,7 @@ void ICACHE_FLASH_ATTR mqtt_timer(void *arg)
 
 
 			client->sendTimeout = MQTT_SEND_TIMOUT;
-			INFO("MQTT: Sending, type: %d, id: %04X\r\n",client->mqtt_state.pending_msg_type, client->mqtt_state.pending_msg_id);
+			//INFO("MQTT: Sending, type: %d, id: %04X\r\n",client->mqtt_state.pending_msg_type, client->mqtt_state.pending_msg_id);
 			if(client->security){
 				espconn_secure_sent(client->pCon, client->mqtt_state.outbound_message->data, client->mqtt_state.outbound_message->length);
 			}
@@ -345,7 +345,7 @@ mqtt_tcpclient_connect_cb(void *arg)
 
 
 	client->sendTimeout = MQTT_SEND_TIMOUT;
-	INFO("MQTT: Sending, type: %d, id: %04X\r\n",client->mqtt_state.pending_msg_type, client->mqtt_state.pending_msg_id);
+	//INFO("MQTT: Sending, type: %d, id: %04X\r\n",client->mqtt_state.pending_msg_type, client->mqtt_state.pending_msg_id);
 	if(client->security){
 		espconn_secure_sent(client->pCon, client->mqtt_state.outbound_message->data, client->mqtt_state.outbound_message->length);
 	}
@@ -467,7 +467,7 @@ MQTT_Task(os_event_t *e)
 
 
 				client->sendTimeout = MQTT_SEND_TIMOUT;
-				INFO("MQTT: Sending, type: %d, id: %04X\r\n",client->mqtt_state.pending_msg_type, client->mqtt_state.pending_msg_id);
+				//INFO("MQTT: Sending, type: %d, id: %04X\r\n",client->mqtt_state.pending_msg_type, client->mqtt_state.pending_msg_id);
 				if(client->security){
 					espconn_secure_sent(client->pCon, dataBuffer, dataLen);
 				}
